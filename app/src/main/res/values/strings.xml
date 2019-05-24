@@ -29,4 +29,5 @@
     <string name="expiration_date">29 Jan 2019</string>
     <string name="please_upgrade_now_to_get_full_access">please upgrade now to get full access</string>
     <string name="upgrade_now">UPGRADE NOW</string>
+    <string name="progress">Progress</string>
 </resources>

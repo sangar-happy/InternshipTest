@@ -11,15 +11,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.internshiptest.adapter.SubjectAdapter;
+import com.example.internshiptest.entity.Subject;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
     BottomNavigationView mBottomNavigationView;
+    List<Subject> mSubjectList = new ArrayList<>();
+    SubjectAdapter mSubjectAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +44,12 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        RecyclerView recyclerView = findViewById(R.id.subjects_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
+        mSubjectAdapter = new SubjectAdapter(mSubjectList);
+        recyclerView.setAdapter(mSubjectAdapter);
+        setSubjectList();
 
         mBottomNavigationView = findViewById(R.id.bottom_navigation);
         mBottomNavigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
@@ -118,5 +133,12 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-
+    void setSubjectList() {
+        mSubjectList.add(new Subject(R.mipmap.ic_launcher, "Mental Ability", 0, 0));
+        mSubjectList.add(new Subject(R.mipmap.ic_launcher, "Physics", 0, 0));
+        mSubjectList.add(new Subject(R.mipmap.ic_launcher, "Chemistry", 0, 0));
+        mSubjectList.add(new Subject(R.mipmap.ic_launcher, "Mathematics", 0, 0));
+        mSubjectList.add(new Subject(R.mipmap.ic_launcher, "Biology", 0, 0));
+        mSubjectAdapter.notifyDataSetChanged();
+    }
 }
