@@ -10,61 +10,191 @@
     tools:showIn="@layout/app_bar_main">
 
     <RelativeLayout
-        android:id="@+id/top_banner"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorTopBannerBg">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button_close"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:background="@drawable/ic_close_24dp" />
+        <RelativeLayout
+            android:id="@+id/top_banner"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/colorTopBannerBg">
 
-        <ImageView
-            android:id="@+id/top_banner_display_pic"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="45dp"
-            android:layout_marginLeft="45dp"
-            android:layout_toEndOf="@+id/button_close"
-            android:layout_toRightOf="@+id/button_close"
-            android:src="@mipmap/ic_launcher" />
+            <Button
+                android:id="@+id/button_close"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_close_24dp" />
 
-        <LinearLayout
-            android:id="@+id/top_banner_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginLeft="45dp"
-            android:layout_toEndOf="@+id/top_banner_display_pic"
-            android:layout_toRightOf="@+id/top_banner_display_pic"
-            android:orientation="vertical"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="45dp"
-            android:layout_marginRight="45dp"
-            android:gravity="end">
+            <ImageView
+                android:id="@+id/top_banner_display_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_toEndOf="@+id/button_close"
+                android:layout_toRightOf="@+id/button_close"
+                android:src="@mipmap/ic_launcher" />
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/top_banner_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/top_banner_condition_text"
-                android:textColor="#926404"
-                android:textSize="10sp"
-                />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_toEndOf="@+id/top_banner_display_pic"
+                android:layout_toRightOf="@+id/top_banner_display_pic"
+                android:gravity="end|center_vertical"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="true"
-                android:text="@string/top_banner_refund_text"
-                android:fontFamily="sans-serif-black"
-                style="@style/TextAppearance.AppCompat.Large"
-                android:textSize="18sp"/>
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/top_banner_condition_text"
+                    android:textColor="#926404"
+                    android:textSize="10sp"
+                    app:fontFamily="sans-serif-black" />
+
+                <LinearLayout
+                    android:id="@+id/top_banner_refund_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/get"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        app:fontFamily="sans-serif-black" />
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/refund_percentage"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="18sp"
+                        app:fontFamily="sans-serif-black" />
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/refund"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        app:fontFamily="sans-serif-black" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_and_condition"
+                    android:textColor="#926404"
+                    android:textSize="5sp"
+                    app:fontFamily="sans-serif-black" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_shape"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="Upgrade Today"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Offer Valid for Limited Time Hurry Up!"
+                    android:textColor="#926404"
+                    android:textSize="5sp"
+                    app:fontFamily="sans-serif-black" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/upgrade_notification"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/top_banner"
+            app:cardCornerRadius="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/pic_gift"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="15dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView
+                    android:id="@+id/expired_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/pic_gift"
+                    android:layout_toEndOf="@+id/pic_gift"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/your_free_trial_expired_on"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/expired_on"
+                    android:layout_toEndOf="@+id/expired_on"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/expiration_date"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+                <TextView
+                    android:id="@+id/please_upgrade_for_full_access"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/pic_gift"
+                    android:layout_toEndOf="@+id/pic_gift"
+                    android:layout_below="@id/expired_on"
+                    android:text="@string/please_upgrade_now_to_get_full_access"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/button_shape"
+                    android:textColor="@android:color/white"
+                    android:text="@string/upgrade_now"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -13,11 +13,20 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="top_banner_condition_text">COMPLETE 100% SYLLABUS</string>
-    <string name="top_banner_refund_text">GET 100% REFUND</string>
+
     <string name="home">HOME</string>
     <string name="tests">TESTS</string>
     <string name="analysis">ANALYSIS</string>
     <string name="doubts">DOUBTS</string>
     <string name="profile">PROFILE</string>
+
+    <string name="top_banner_condition_text">COMPLETE 100% SYLLABUS</string>
+    <string name="get">GET\u0020</string>
+    <string name="refund_percentage">100%\u0020</string>
+    <string name="refund">REFUND</string>
+    <string name="terms_and_condition">Terms&#38; Condition Apply</string>
+    <string name="your_free_trial_expired_on">Your free trial expired on\u0020</string>
+    <string name="expiration_date">29 Jan 2019</string>
+    <string name="please_upgrade_now_to_get_full_access">please upgrade now to get full access</string>
+    <string name="upgrade_now">UPGRADE NOW</string>
 </resources>
